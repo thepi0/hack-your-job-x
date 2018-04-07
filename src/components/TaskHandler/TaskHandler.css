@@ -1,0 +1,31 @@
+.TaskHandler-task-list {
+    float: left;
+    width: 30%;
+}
+
+.TaskHandler-task-summary {
+    margin-left: 30%;
+}
+
+.TaskHandler-task-summary-container {
+    padding: 0 50px;
+}
+
+.TaskHandler-task-summary-title, .TaskHandler-task-list-title {
+    font-size: 36px;
+}
+
+.TaskHandler-task-summary-editor {
+    background: rgba(216, 216, 216, 0.23);
+    font-size: 20px;
+}
+
+.TaskHandler-task-summary-editor > textarea {
+    font-family: inherit;
+    font-size: inherit;
+    border: 0;
+    width: 100%;
+    display: block;
+    background: transparent;
+    padding: 30px;
+}

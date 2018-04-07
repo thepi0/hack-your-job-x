@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react';
 
 import ProfileHeader from 'Components/ProfileHeader';
+import TaskHandler from 'Components/TaskHandler';
 
 import './Dashboard.css';
 
@@ -35,6 +36,7 @@ export default class Dashboard extends Component {
             <div className="content-wrapper">
                 Dashboard content will come here
                 <ProfileHeader />
+                <TaskHandler user="Fiilis-Ville"/>
             </div>
         )
     }

@@ -1191,9 +1191,9 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-bootstrap@^4.0.0-alpha.6:
-  version "4.0.0-beta"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-beta.tgz#dc5928175d2e71310bc668cf9e05a907211b72a6"
+bootstrap@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0.tgz#ceb03842c145fcc1b9b4e15da2a05656ba68469a"
 
 bowser@^1.7.3:
   version "1.8.0"
@@ -1788,7 +1788,7 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-date-fns@^1.27.2:
+date-fns@^1.29.0:
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
 
@@ -1918,7 +1918,7 @@ dom-helpers@^3.2.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.2.1.tgz#3203e07fed217bd1f424b019735582fc37b2825a"
 
-dom-helpers@^3.2.1:
+dom-helpers@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
 
@@ -3549,9 +3549,9 @@ jest@^20.0.4:
   dependencies:
     jest-cli "^20.0.4"
 
-jquery@>=1.9.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+jquery@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
 js-base64@^2.1.9:
   version "2.3.2"
@@ -3725,13 +3725,13 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-linkifyjs@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-2.1.5.tgz#effc9f01e4aeafbbdbef21a45feab38b9516f93e"
+linkifyjs@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-2.1.6.tgz#f1cc88a86ff8863196615857fd47eb193c0a26cb"
   optionalDependencies:
-    jquery ">=1.9.0"
-    react ">=0.14.0"
-    react-dom ">=0.14.0"
+    jquery "^3.3.1"
+    react "^16.2.0"
+    react-dom "^16.2.0"
 
 load-json-file@^1.0.0:
   version "1.1.0"
@@ -3834,6 +3834,10 @@ lodash.uniq@^4.5.0:
 "lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.4, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
+lodash@^4.17.5:
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
 longest@^1.0.1:
   version "1.0.1"
@@ -3982,19 +3986,19 @@ minimist@^1.1.1, minimist@^1.2.0:
   dependencies:
     minimist "0.0.8"
 
-mobx-react@^4.3.5:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.3.5.tgz#76853f2f2ef4a6f960c374bcd9f01e875929c04c"
+mobx-react@^4.4.2:
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.4.3.tgz#baa9ec41165ee35ae7b9df19bca10190f36f117e"
   dependencies:
     hoist-non-react-statics "^2.3.1"
 
-mobx@^3.3.2:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.4.1.tgz#37abe5ee882d401828d9f26c6c1a2f47614bbbef"
+mobx@^3.6.1:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.6.2.tgz#fb9f5ff5090539a1ad54e75dc4c098b602693320"
 
-moment@^2.19.2:
-  version "2.20.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
+moment@^2.21.0:
+  version "2.22.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.0.tgz#7921ade01017dd45186e7fee5f424f0b8663a730"
 
 ms@0.7.1:
   version "0.7.1"
@@ -4765,6 +4769,14 @@ prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7,
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+prop-types@^15.6.1:
+  version "15.6.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 proxy-addr@~2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.2.tgz#6571504f47bb988ec8180253f85dd7e14952bdec"
@@ -4880,7 +4892,7 @@ react-dev-utils@^0.5.2:
     sockjs-client "1.0.1"
     strip-ansi "3.0.1"
 
-react-dom@>=0.14.0, react-dom@^15.6.2:
+react-dom@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
   dependencies:
@@ -4888,6 +4900,15 @@ react-dom@>=0.14.0, react-dom@^15.6.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
+
+react-dom@^16.2.0:
+  version "16.3.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.3.1.tgz#6a3c90a4fb62f915bdbcf6204422d93a7d4ca573"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 react-dropzone@^3.13.4:
   version "3.13.4"
@@ -4923,17 +4944,11 @@ react-icons@^2.2.7:
   dependencies:
     react-icon-base "2.1.0"
 
-"react-infinite-calendar@git+https://github.com/thepi0/react-infinite-calendar.git#disabledTests":
-  version "2.3.1"
-  resolved "git+https://github.com/thepi0/react-infinite-calendar.git#4998d20c966ab5eb4081f2a1057e7eae8c7b005d"
+react-keydown@^1.9.7:
+  version "1.9.7"
+  resolved "https://registry.yarnpkg.com/react-keydown/-/react-keydown-1.9.7.tgz#cd168d4b0194b6ef71bca47e5c1cbc5d24ab5498"
   dependencies:
-    classnames "^2.2.5"
-    date-fns "^1.27.2"
-    dom-helpers "^3.2.1"
-    prop-types "^15.5.7"
-    react-tiny-virtual-list "^2.0.0"
-    react-transition-group "^1.1.3"
-    recompose "^0.26.0"
+    core-js "^2.5.0"
 
 react-loader-advanced@^1.7.1:
   version "1.7.1"
@@ -4980,13 +4995,13 @@ react-test-renderer@^15.6.2:
     fbjs "^0.8.9"
     object-assign "^4.1.0"
 
-react-tiny-virtual-list@^2.0.0:
+react-tiny-virtual-list@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/react-tiny-virtual-list/-/react-tiny-virtual-list-2.1.4.tgz#a574c4dfd8ccf462e3a335f665cffbfd08ce6e7d"
   dependencies:
     prop-types "^15.5.7"
 
-react-transition-group@^1.1.3, react-transition-group@^1.2.0, react-transition-group@^1.2.1:
+react-transition-group@^1.2.0, react-transition-group@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-1.2.1.tgz#e11f72b257f921b213229a774df46612346c7ca6"
   dependencies:
@@ -4996,7 +5011,13 @@ react-transition-group@^1.1.3, react-transition-group@^1.2.0, react-transition-g
     prop-types "^15.5.6"
     warning "^3.0.0"
 
-react@>=0.14.0, react@^15.6.2:
+react@^0.13.2:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/react/-/react-0.13.3.tgz#a2dfa85335d7dc02b82b482f089582e64cc13356"
+  dependencies:
+    envify "^3.0.0"
+
+react@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
@@ -5006,11 +5027,14 @@ react@>=0.14.0, react@^15.6.2:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react@^0.13.2:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/react/-/react-0.13.3.tgz#a2dfa85335d7dc02b82b482f089582e64cc13356"
+react@^16.2.0:
+  version "16.3.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.3.1.tgz#4a2da433d471251c69b6033ada30e2ed1202cfd8"
   dependencies:
-    envify "^3.0.0"
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -5551,9 +5575,9 @@ sshpk@^1.7.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
 
-store2@^2.5.7:
-  version "2.5.7"
-  resolved "https://registry.yarnpkg.com/store2/-/store2-2.5.7.tgz#0f1d15c6c45e51940bea0a4bf09fe23e77f1d508"
+store2@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/store2/-/store2-2.7.0.tgz#5e286810ed382d2ddbbd5060a46d791fc97e8d7b"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
