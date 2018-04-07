@@ -1,3 +1,7 @@
+.TaskHandler {
+    margin: 50px;
+}
+
 .TaskHandler-task-list {
     float: left;
     width: 30%;
@@ -8,7 +12,7 @@
 }
 
 .TaskHandler-task-summary-container {
-    padding: 0 50px;
+    padding: 0 70px;
 }
 
 .TaskHandler-task-summary-title, .TaskHandler-task-list-title {
