@@ -3,7 +3,7 @@ import {inject, observer} from 'mobx-react';
 import Task from 'Components/Task';
 import './TaskHandler.css';
 
-@inject('backendStore') @observer
+@inject('backendStore', 'userStore') @observer
 class TaskHandler extends Component {
 
     constructor(props) {
@@ -17,6 +17,8 @@ class TaskHandler extends Component {
             type: 1,
             text: "Tee koodaustaikohja backendiin"
         }
+
+        this.props.backendStore.loadData();
     }
 
     componentDidMount() {
@@ -51,7 +53,10 @@ class TaskHandler extends Component {
     }
 
     render() {
-        const tasks = this.props.backendStore.getUserTasks(this.props.user);
+        if(!this.props.userStore.selectedUser)
+            return null;
+        console.log(this.props.userStore.selectedUser);
+        const tasks = this.props.backendStore.getUserTasks(this.props.userStore.selectedUser.name);
         let i = 0;
         console.log(tasks);
         return (

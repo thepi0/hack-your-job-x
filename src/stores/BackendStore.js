@@ -27,7 +27,7 @@ class BackendStore {
     }
 
     @action loadData() {
-        axios.get('api/v1/projects/1/').then(data => {
+        axios.get('projects/1/').then(data => {
             console.log(data);
             this.data = data;
         })
