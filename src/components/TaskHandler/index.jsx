@@ -72,7 +72,15 @@ class TaskHandler extends Component {
         return (
             <div className="TaskHandler">
                 <div className="TaskHandler-task-list">
-                    <div className="TaskHandler-task-list-title">Sprint 15</div>
+                    <div className="TaskHandler-task-list-title">
+                        Sprint 15
+                        <div className="filter"><div className="filter-color" style={{background: "#7ed321"}}></div></div>
+                        <div className="filter"><div className="filter-color" style={{background: "#f8e71c"}}></div></div>
+                        <div className="filter"><div className="filter-color" style={{background: "#0f6780"}}></div></div>
+                        <div className="filter-title">Näytä</div>
+                        
+                    </div>
+                    <br/>
                     {
                         tasks && tasks["In Progress"] && tasks["In Progress"].map(t => {
                             return <Task data={t} key={i++}/>
@@ -92,16 +100,19 @@ class TaskHandler extends Component {
                 <div className="TaskHandler-task-summary">
                     <div className="TaskHandler-task-summary-container">
                     <div className="TaskHandler-task-summary-title">Eilen</div>
+                    <br/>
                     <div className="TaskHandler-task-summary-editor">
                         <textarea onDrop={this.onYesterdayDrop} onDragOver={this.allowDrop} defaultValue={user.yesterday} ref={(e) => this.tasksYesterday = e} onChange={this.yesterdayChange}></textarea>
                     </div>
                     <br/>
                     <div className="TaskHandler-task-summary-title">Tänään</div>
+                    <br/>
                     <div className="TaskHandler-task-summary-editor" onDrop={this.onTodayDrop} onDragOver={this.allowDrop}>
                         <textarea defaultValue={this.props.backendStore.tasksToday} ref={(e) => this.tasksToday = e} onChange={this.todayChange}></textarea>
                     </div>
                     <br/>
                     <div className="TaskHandler-task-summary-title">Esteet</div>
+                    <br/>
                     <div className="TaskHandler-task-summary-editor" onDrop={this.onProblemsDrop} onDragOver={this.allowDrop}>
                         <textarea defaultValue={this.props.backendStore.tasksProblems} ref={(e) => this.tasksProblems = e} onChange={this.blockedChange}></textarea>
                     </div>

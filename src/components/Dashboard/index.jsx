@@ -52,7 +52,7 @@ export default class Dashboard extends Component {
         return (
             <div className="content-wrapper">
                 <ProfileHeader />
-                <TaskHandler user="Fiilis-Ville"/>
+                <TaskHandler/>
             </div>
         )
     }
