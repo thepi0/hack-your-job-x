@@ -60,6 +60,30 @@ export class UserStore {
         return this.users[0];
     }
 
+    sendData() {
+        let data = {
+            start: '2018-04-07 09:01',
+            end: '2018-04-07 09:11'
+        };
+        let userData = [];
+        this.users.map(u => {
+            userData.push({
+                user_id: u.id,
+                text_yesterday: u.yesterday || "a",
+                text_today: u.today || "b",
+                text_blocked: u.blocked || "c",
+                time_spent: u.time_spent
+            });
+        });
+
+        data.dailynote_set = userData;
+
+        console.log(data);
+
+        axios.post('/projects/1/dailies/', data).then(response => {
+            console.log(response);
+        })
+    }
 }
 
 export class User {
