@@ -15,7 +15,7 @@ import userStore from 'Stores/UserStore';
 
 import './ProfileHeader.css';
 
-@inject('ProfileHeaderStore') @observer
+@inject('ProfileHeaderStore', 'userStore') @observer
 class ProfileHeader extends Component {
 
     constructor() {
@@ -59,6 +59,7 @@ class ProfileHeader extends Component {
 
     endDaily = () => {
         this.props.history.push('/summary');
+        userStore.sendData();
     }
 
     render() {

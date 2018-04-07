@@ -66,23 +66,23 @@ export class UserStore {
             end: '2018-04-07 09:11'
         };
         let userData = [];
-        this.users.map(u => {
+        this.users
+        .filter(u => {return u.selected_for_daily})
+        .map(u => {
             userData.push({
                 user_id: u.id,
-                text_yesterday: u.yesterday || "a",
-                text_today: u.today || "b",
-                text_blocked: u.blocked || "c",
+                text_yesterday: u.yesterday || "",
+                text_today: u.today || "",
+                text_blocked: u.blocked || "",
                 time_spent: u.time_spent
             });
         });
 
         data.dailynote_set = userData;
 
-        console.log(data);
-
         axios.post('/projects/1/dailies/', data).then(response => {
             console.log(response);
-        })
+        });
     }
 }
 
