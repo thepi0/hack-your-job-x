@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react';
 import Avatar from 'material-ui/Avatar';
 import MdPause from 'react-icons/lib/md/pause';
-import keydown from 'react-keydown';
 
 import ProfileHeaderStore from 'Stores/ProfileHeaderStore';
 import snackbarStore from 'Stores/SnackbarStore';
@@ -26,18 +25,6 @@ export default class ProfileHeader extends Component {
             selectedUser: null,
             selectedUserId: null
         };
-    }
-
-    @keydown('space')
-    submit( event ) {
-        if (!this.state.selectedUser) {
-            return;
-        }
-        if (timerStore.timer_running) {
-            timerStore.stopTimer(this.state.selectedUser);
-        } else {
-            timerStore.startTimer(this.state.selectedUser);
-        }
     }
 
     componentDidMount() {
@@ -123,7 +110,7 @@ export default class ProfileHeader extends Component {
                     {userStore.getUsers.length ?
                         userStore.getUsers.map(user => {
                             return (
-                                <div key={user.id} onClick={() => this.selectUser(user)} className="not-active-user-wrap">
+                                <div key={user.id} onClick={() => this.selectUser(user)} className="not-active-user-wrap" style={{opacity: user.time_spent > 0 ? '0.6' : '1'}}>
                                     <div className="profile-avatar-image">
                                         <Avatar
                                             src={user.avatar}

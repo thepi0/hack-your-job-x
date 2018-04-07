@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react';
+import keydown from 'react-keydown';
 
 import ProfileHeader from 'Components/ProfileHeader';
 import TaskHandler from 'Components/TaskHandler';
+import timerStore from 'Stores/TimerStore';
+import userStore from 'Stores/UserStore';
 
 import './Dashboard.css';
 
@@ -15,6 +18,20 @@ export default class Dashboard extends Component {
         this.state = {
             people: null
         };
+    }
+
+    @keydown('space')
+    submit(event) {
+        event.preventDefault();
+        console.log('space bar pressed');
+        if (!userStore.selectedUser) {
+            return;
+        }
+        if (timerStore.timer_running) {
+            timerStore.stopTimer(userStore.selectedUser);
+        } else {
+            timerStore.startTimer(userStore.selectedUser);
+        }
     }
 
     componentDidMount() {
@@ -34,7 +51,6 @@ export default class Dashboard extends Component {
 
         return (
             <div className="content-wrapper">
-                Dashboard content will come here
                 <ProfileHeader />
                 <TaskHandler user="Fiilis-Ville"/>
             </div>
