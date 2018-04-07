@@ -92,7 +92,7 @@ export class User {
     @observable avatar = "";
     @observable selected = false;
     @observable time_spent = 0;
-    @observable selected_for_daily = false;
+    @observable selected_for_daily = true;
     @observable yesterday = "";
     @observable today = "";
     @observable blocked = "";

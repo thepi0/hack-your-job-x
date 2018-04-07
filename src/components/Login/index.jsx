@@ -45,7 +45,7 @@ class Login extends Component {
                     <div className="login-logo"><img src={Logo} alt="Hack My Daily" /></div>
                     <div className="login-input"><input type="text" placeholder="Anna koodi" ref={(e) => this.tokenInput = e}/></div>
                     <div className="login-button"><FlatButton label="Astu dailyn maailmaan" style={buttonStyle} labelStyle={{textTransform: 'capitalize', fontSize: '20px',
-              fontWeight: '500'}} onClick={() => this.login()} /></div>
+              fontWeight: '500', fontFalimy: 'GTEesti'}} onClick={() => this.login()} /></div>
                 </div>
             </div>
         )

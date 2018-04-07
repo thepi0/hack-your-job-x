@@ -20,11 +20,11 @@ class ProfileHeaderStore {
 
     getSpinnerColor = (time) => {
         if (time > 60) {
-            return '#f44141';
+            return '#f8485e';
         } else if (time > 45) {
             return '#f4c242';
         } else {
-            return '#4ff441';
+            return '#49e2c5';
         }
     }
 

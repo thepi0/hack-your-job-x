@@ -1,7 +1,7 @@
 .profile-header-wrapper {
     display: flex;
     background-color:#16212c;
-    padding: 20px 20px 15px 20px;
+    padding: 20px 80px 15px 80px;
     flex-direction: row;
     min-height: 235px;
     justify-content: center;

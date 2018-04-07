@@ -70,7 +70,7 @@ class TaskHandler extends Component {
         let i = 0;
 
         return (
-            <div className="TaskHandler">
+            <div className="TaskHandler content-width">
                 <div className="TaskHandler-task-list">
                     <div className="TaskHandler-task-list-title">
                         Sprint 15
@@ -78,7 +78,7 @@ class TaskHandler extends Component {
                         <div className="filter"><div className="filter-color" style={{background: "#f8e71c"}}></div></div>
                         <div className="filter"><div className="filter-color" style={{background: "#0f6780"}}></div></div>
                         <div className="filter-title">Näytä</div>
-                        
+
                     </div>
                     <br/>
                     {
