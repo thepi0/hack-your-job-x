@@ -1,0 +1,14 @@
+{
+  "presets": ["es2015", "stage-1", "react"],
+  "plugins": ["transform-decorators-legacy", "transform-class-properties", "transform-decorators",
+    ["module-resolver", {
+      "alias": {
+        "Components": "./src/components",
+        "Stores": "./src/stores",
+        "Images": "./src/images",
+        "Services": "./src/services",
+        "Public": "./public"
+      }
+    }]
+  ]
+}

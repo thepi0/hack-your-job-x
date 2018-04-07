@@ -1,0 +1,36 @@
+@font-face {
+    font-family: GTEesti;
+    src: url("../public/fonts/GT-Eesti-Text-Regular.otf") format("otf"),
+         url("../public/fonts/GT-Eesti-Text-Regular.eot") format("eot"),
+         url("../public/fonts/GT-Eesti-Text-Regular.ttf") format("ttf"),
+         url("../public/fonts/GT-Eesti-Text-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: GTEesti;
+    font-weight: 600;
+    src: url("../public/fonts/GT-Eesti-Text-Medium.otf") format("otf"),
+         url("../public/fonts/GT-Eesti-Text-Medium.eot") format("eot"),
+         url("../public/fonts/GT-Eesti-Text-Medium.ttf") format("ttf"),
+         url("../public/fonts/GT-Eesti-Text-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: GTEesti;
+    font-weight: 200;
+    src: url("../public/fonts/GT-Eesti-Text-Light.otf") format("otf"),
+         url("../public/fonts/GT-Eesti-Text-Light.eot") format("eot"),
+         url("../public/fonts/GT-Eesti-Text-Light.ttf") format("ttf"),
+         url("../public/fonts/GT-Eesti-Text-Light.woff") format("woff");
+}
+
+body, html {
+    background-color: #FFFFFF;
+    margin: 0;
+    font-family: 'GTEesti', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
