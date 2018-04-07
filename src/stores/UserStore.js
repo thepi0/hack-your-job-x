@@ -60,6 +60,9 @@ export class User {
     @observable avatar = "";
     @observable selected = false;
     @observable time_spent = 0;
+    @observable yesterday = "";
+    @observable today = "";
+    @observable blocked = "";
 
     constructor(id, name = "", avatar = "") {
         this.id = id;
@@ -81,6 +84,18 @@ export class User {
 
     @action.bound updateTimeSpent(time) {
         this.time_spent = time;
+    }
+
+    @action.bound updateYesterday(text) {
+        this.yesterday = text;
+    }
+
+    @action.bound updateToday(text) {
+        this.today = text;
+    }
+
+    @action.bound updateBlocked(text) {
+        this.blocked = text;
     }
 
     @action.bound setUserInfo({name, avatar}) {
