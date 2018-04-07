@@ -30,7 +30,14 @@ export default class ProfileHeader extends Component {
 
     @keydown('space')
     submit( event ) {
-        timerStore.stopTimer(this.state.selectedUser);
+        if (!this.state.selectedUser) {
+            return;
+        }
+        if (timerStore.timer_running) {
+            timerStore.stopTimer(this.state.selectedUser);
+        } else {
+            timerStore.startTimer(this.state.selectedUser);
+        }
     }
 
     componentDidMount() {
@@ -48,9 +55,12 @@ export default class ProfileHeader extends Component {
 
     selectUser = (user) => {
         this.setState({selectedUser: user});
-        if (user.id === this.state.selectedUserId) {
+        if (user.id === this.state.selectedUserId && timerStore.timer_running) {
             timerStore.stopTimer(user);
+        } else if (user.id === this.state.selectedUserId && !timerStore.timer_running) {
+            timerStore.startTimer(user);
         } else {
+            this.setState({selectedUser: user});
             this.setState({selectedUserId: user.id});
             timerStore.clearTimer();
             userStore.selectUser(user);
@@ -70,7 +80,7 @@ export default class ProfileHeader extends Component {
 
         return (
             <div className="profile-header-wrapper">
-                <div className="profile-left" onClick={this.selectUser}>
+                <div className="profile-left" onClick={() => this.selectUser(this.state.selectedUser)}>
                     {userStore.selectedUser ?
                         <div className="profile-avatar-wrap">
                             <div className="timer-spinner">
