@@ -11,6 +11,8 @@ import timerStore from 'Stores/TimerStore';
 import Avatar from 'material-ui/Avatar';
 import Logo from 'Public/logo.svg';
 import Crown from 'Public/daily-keisarin-kruunu.png';
+import Loader from 'react-loader-advanced';
+import spinnerIcon from 'Public/spinner.svg';
 
 import './Pick.css';
 
@@ -51,6 +53,8 @@ class Pick extends Component {
         const buttonStyle = {borderRadius: '30px', backgroundColor: '#49e2c5', color: '#FFFFFF', padding: '5px 15px', height: '50px', fontSize: '20px',
   fontWeight: '500', fontFalimy: 'GTEesti'};
 
+    const spinner = <img alt="spin" src={spinnerIcon} className="spinner"/>;
+
         return (
             <div className="content-wrapper pick">
                 <Header />
@@ -74,33 +78,35 @@ class Pick extends Component {
                             <div className="people-inner-heading">
                                 <h2>Läsnäolijat</h2>
                             </div>
-                            <div className="people-inner">
-                                {userStore.getAllUsers.length ?
-                                    userStore.getAllUsers.map((user, index) => {
-                                        return (
-                                            <div key={user.id} onClick={() => this.selectUser(user)} className="selection-user-wrap">
-                                                {index === 0 ?
-                                                    <div className="user-crown">
-                                                        <img src={Crown} alt="Crown" />
+                            <Loader show={userStore.loadingUsers} style={{width: '100%'}} message={spinner}>
+                                <div className="people-inner">
+                                    {userStore.getAllUsers.length ?
+                                        userStore.getAllUsers.map((user, index) => {
+                                            return (
+                                                <div key={user.id} onClick={() => this.selectUser(user)} className="selection-user-wrap">
+                                                    {index === 0 ?
+                                                        <div className="user-crown">
+                                                            <img src={Crown} alt="Crown" />
+                                                        </div>
+                                                        :
+                                                        null
+                                                    }
+                                                    <div className={"profile-avatar-image small" + (user.selected_for_daily ? ' daily-selected' : '')}>
+                                                        <Avatar
+                                                            src={user.avatar}
+                                                            size={60} />
                                                     </div>
-                                                    :
-                                                    null
-                                                }
-                                                <div className={"profile-avatar-image small" + (user.selected_for_daily ? ' daily-selected' : '')}>
-                                                    <Avatar
-                                                        src={user.avatar}
-                                                        size={60} />
+                                                    <div className="profile-avatar-name small">
+                                                        {user.name}
+                                                    </div>
                                                 </div>
-                                                <div className="profile-avatar-name small">
-                                                    {user.name}
-                                                </div>
-                                            </div>
-                                        )
-                                    })
-                                    :
-                                    null
-                                }
-                            </div>
+                                            )
+                                        })
+                                        :
+                                        null
+                                    }
+                                </div>
+                            </Loader>
                         </div>
                     </div>
                     <div className="people-action">

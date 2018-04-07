@@ -19,6 +19,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 750px;
+    min-height: 235px;
 }
 
 .people-inner-heading {
