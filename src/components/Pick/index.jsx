@@ -62,7 +62,7 @@ class Pick extends Component {
                                 {timerStore.getDate()}
                             </div>
                             <div>
-                                {this.state.user && this.state.user.name ? <h1>Huomenta {this.state.user.name}! Hieno dailypäivä tänään.</h1> : null }
+                                {this.state.user && this.state.user.name ? <h1>Iltaa {this.state.user.name}! Hieno dailypäivä tänään.</h1> : null }
                             </div>
                         </div>
                         <div className="pick-time">

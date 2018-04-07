@@ -12,8 +12,8 @@ export class UserStore {
             axios.get('/projects/1/').then((users) => {
                 console.log(users);
                 let userData = users.data.users;
-                const newUsers = userData.map((user, index) => {
-                    const newUser = new User(index, user.name, user.avatar);
+                const newUsers = userData.map((user) => {
+                    const newUser = new User(user.id, user.name, user.avatar);
                     newUser.setUserInfo(user);
                     return newUser;
                 }).filter(user => !this.userIds.includes(user.id));
