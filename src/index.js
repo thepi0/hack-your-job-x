@@ -49,7 +49,7 @@ class App extends Component {
                                     <Route path="/login" component={Login}/>
                                     <Route path="/pick" component={Pick}/>
                                     <Route path="/summary" component={Summary}/>
-                                    <Redirect from="/" to="/dashboard" />
+                                    <Redirect from="/" to="/login" />
                                 </Switch>
                             </div>
                         </HashRouter>

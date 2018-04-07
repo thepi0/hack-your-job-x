@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react';
 import Avatar from 'material-ui/Avatar';
 import MdPause from 'react-icons/lib/md/pause';
+import { withRouter } from 'react-router-dom';
 
 import ProfileHeaderStore from 'Stores/ProfileHeaderStore';
 import snackbarStore from 'Stores/SnackbarStore';
@@ -15,7 +16,7 @@ import userStore from 'Stores/UserStore';
 import './ProfileHeader.css';
 
 @inject('ProfileHeaderStore') @observer
-export default class ProfileHeader extends Component {
+class ProfileHeader extends Component {
 
     constructor() {
         super();
@@ -134,3 +135,5 @@ export default class ProfileHeader extends Component {
         )
     }
 }
+
+export default withRouter(ProfileHeader);
