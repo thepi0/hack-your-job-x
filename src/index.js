@@ -10,6 +10,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import Dashboard from 'Components/Dashboard';
 import Login from 'Components/Login';
+import Pick from 'Components/Pick';
 
 import snackbarStore from 'Stores/SnackbarStore';
 import backendStore from 'Stores/BackendStore';
@@ -45,7 +46,8 @@ class App extends Component {
                                 <Switch>
                                     <Route path="/dashboard" component={Dashboard}/>
                                     <Route path="/login" component={Login}/>
-                                    <Redirect from="/" to="/dashboard" />
+                                    <Route path="/pick" component={Pick}/>
+                                    <Redirect from="/" to="/login" />
                                 </Switch>
                             </div>
                         </HashRouter>

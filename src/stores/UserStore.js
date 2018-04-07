@@ -48,8 +48,16 @@ export class UserStore {
         return this.users.map(user => user.id);
     }
 
-    @computed get getUsers() {
+    @computed get getAllUsers() {
         return this.users.filter(user => !user.selected) || null;
+    }
+
+    @computed get getUsers() {
+        return this.users.filter(user => !user.selected && user.selected_for_daily) || null;
+    }
+
+    @computed get getSignedInUser() {
+        return this.users[0];
     }
 
 }
@@ -60,6 +68,7 @@ export class User {
     @observable avatar = "";
     @observable selected = false;
     @observable time_spent = 0;
+    @observable selected_for_daily = false;
 
     constructor(id, name = "", avatar = "") {
         this.id = id;
@@ -69,6 +78,10 @@ export class User {
 
     @computed get fullName() {
         return this.name;
+    }
+
+    @action.bound toggleForDaily () {
+        this.selected_for_daily = !this.selected_for_daily;
     }
 
     @action.bound select() {

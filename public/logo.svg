@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="229" height="137" viewBox="0 0 229 137">
+    <g fill="none" fill-rule="evenodd" transform="translate(-2 2)">
+        <text fill="#FFF" font-family="GTEestiText-Medium, GT Eesti Text" font-size="36" font-weight="400">
+            <tspan x="0" y="127">Hack My Daily</tspan>
+        </text>
+        <circle cx="116" cy="35" r="24" fill="#FFF"/>
+        <path stroke="#49E2C5" stroke-dasharray="1,10" stroke-linecap="round" stroke-width="4" d="M116 70c19.33 0 35-15.67 35-35S135.33 0 116 0 81 15.67 81 35s15.67 35 35 35z"/>
+    </g>
+</svg>

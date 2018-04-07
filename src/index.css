@@ -29,6 +29,22 @@ body, html {
     margin: 0;
     font-family: 'GTEesti', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    min-height: 100%;
+}
+
+.content-width {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.content-wrapper.login {
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.content-wrapper.pick {
+    height: 100vh;
+    background-color: #f2f2f2;
 }
 
 a {

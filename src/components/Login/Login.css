@@ -1,0 +1,32 @@
+.content-wrapper.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-inner-wrap {
+    padding: 60px 110px 90px 110px;
+    border-radius: 15px;
+    background-color: #16212c;
+    flex-direction: column;
+}
+
+.login-inner-wrap h3 {
+    color: #FFFFFF;
+}
+
+.login-logo {
+    margin-bottom: 55px;
+}
+
+.login-input {
+    margin-bottom: 55px;
+}
+
+.login-input input {
+    max-width: 100%;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    color: #9b9b9b;
+}
