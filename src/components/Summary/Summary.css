@@ -1,18 +1,34 @@
 .Summary {
     background: #f2f2f2;
     min-height: 100vh;
-    padding-top: 100px;
+    padding-bottom: 200px;
 }
 
 .Summary-wrapper {
     max-width: 990px;
     margin: auto;
+    margin-top: 70px;
 }
 
 .Summary-container {
     background: #fff;
-    padding: 50px;
+    padding: 60px;
     margin: 30px 0;
     border-radius: 15px;
     min-height: 800px;
+}
+
+.Summary-container img {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+img.smaller {
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+
+.duration {
 }
