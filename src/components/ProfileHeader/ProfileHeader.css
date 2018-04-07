@@ -1,0 +1,100 @@
+.profile-header-wrapper {
+    display: flex;
+    background-color:#16212c;
+    padding: 20px 20px 15px 20px;
+    flex-direction: row;
+    min-height: 235px;
+    justify-content: center;
+}
+
+.profile-left {
+    flex: 0 0 160px;
+    margin-right: 20px;
+}
+
+.profile-center {
+    display: flex;
+    flex: 0 1 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-right {
+    display: flex;
+    flex: 0 0 auto;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-avatar-wrap {
+    position: relative;
+}
+
+.profile-avatar-image {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.profile-avatar-image.active-user {
+    position: absolute;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -55px;
+}
+
+.profile-avatar-pause {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.timer-spinner {
+    position: relative;
+    float: left;
+}
+
+.timer-spinner svg {
+   -webkit-transform: rotate(-90deg);
+   transform: rotate(-90deg);
+}
+
+.timer-spinner .circle_animation {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  transition: all 1s linear;
+}
+
+.profile-avatar-name {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.not-active-user-wrap {
+    position: relative;
+    padding: 20px 20px 0 20px;
+    flex: 0 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-active-user-wrap .profile-avatar-name {
+    font-size: 16px;
+    font-weight: 500;
+}

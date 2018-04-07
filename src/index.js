@@ -12,6 +12,9 @@ import Dashboard from 'Components/Dashboard';
 
 import snackbarStore from 'Stores/SnackbarStore';
 import backendStore from 'Stores/BackendStore';
+import userStore from 'Stores/UserStore';
+import profileHeaderStore from 'Stores/ProfileHeaderStore';
+import timerStore from 'Stores/TimerStore';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
@@ -32,7 +35,10 @@ class App extends Component {
                 <div>
                     <Provider
                         backendStore={backendStore}
-                        snackbarStore={snackbarStore}>
+                        snackbarStore={snackbarStore}
+                        timerStore={timerStore}
+                        userStore={userStore}
+                        ProfileHeaderStore={profileHeaderStore}>
                         <HashRouter>
                             <div>
                                 <Switch>

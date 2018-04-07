@@ -14,6 +14,10 @@ class BackendStore {
         return false;
     }
 
+    @computed get activeUserIcon() {
+        return '/images/unicorn.jpg';
+    }
+
     @action.bound something2() {
 
     }

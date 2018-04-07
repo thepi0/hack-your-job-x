@@ -27,6 +27,7 @@
     "react-dropzone": "^3.13.4",
     "react-fuzzy-search": "^0.4.0",
     "react-icons": "^2.2.7",
+    "react-keydown": "^1.9.7",
     "react-loader-advanced": "^1.7.1",
     "react-router-dom": "^4.2.2",
     "react-tap-event-plugin": "^2.0.1",

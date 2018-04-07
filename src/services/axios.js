@@ -3,8 +3,8 @@ import {APPLICATION_CLIENT} from '../constants'
 
 const instance = axios.create({
     //dev
-    baseURL: "https://api.hackmydaily.xyz:1446/"/*,
-    headers: {'client': APPLICATION_CLIENT}*/
+    baseURL: "https://api.hackmydaily.xyz:1446/api/v1",
+    headers: {'Authorization': 'Token hackday'}
 });
 
 export const setAuthToken = (token) => {
