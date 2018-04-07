@@ -1,4 +1,5 @@
 import {observable} from 'mobx';
+import moment from 'moment'; // eslint-disable-line no-unused-vars
 
 class TimerStore {
 
@@ -6,9 +7,18 @@ class TimerStore {
     @observable user = null;
     @observable timer;
     @observable timer_running = false;
+    @observable today = new Date();
 
     constructor() {
         this.seconds = 0;
+    }
+
+    getDate = () => {
+        return moment(this.today).lang('fi').format('dddd DD.MM');
+    }
+
+    getTime = () => {
+        return moment(this.today).lang('fi').format('H:mm');
     }
 
     addSecond = () => {

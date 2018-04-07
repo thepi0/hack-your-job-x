@@ -57,13 +57,13 @@ export default class ProfileHeader extends Component {
     }
 
     endDaily = () => {
-        console.log('end daily');
+        this.props.history.push('/summary');
     }
 
     render() {
 
         const buttonStyle = {borderRadius: '30px', backgroundColor: '#f8485e', color: '#FFFFFF', padding: '5px 15px', height: '50px', fontSize: '20px',
-  fontWeight: '500'};
+  fontWeight: '500', fontFamily: 'GTEesti', textTransform: 'capitalize'};
 
         return (
             <div className="profile-header-wrapper">
@@ -127,7 +127,8 @@ export default class ProfileHeader extends Component {
                     }
                 </div>
                 <div className="profile-right">
-                    <FlatButton label="Lopeta daily" style={buttonStyle} onClick={() => this.endDaily()} />
+                    <FlatButton label="Lopeta daily" style={buttonStyle} labelStyle={{textTransform: 'capitalize', fontSize: '20px',
+              fontWeight: '500'}} onClick={() => this.endDaily()} />
                 </div>
             </div>
         )

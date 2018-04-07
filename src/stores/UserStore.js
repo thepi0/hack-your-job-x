@@ -12,8 +12,8 @@ export class UserStore {
             axios.get('/projects/1/').then((users) => {
                 console.log(users);
                 let userData = users.data.users;
-                const newUsers = userData.map((user, index) => {
-                    const newUser = new User(index, user.name, user.avatar);
+                const newUsers = userData.map((user) => {
+                    const newUser = new User(user.id, user.name, user.avatar);
                     newUser.setUserInfo(user);
                     return newUser;
                 }).filter(user => !this.userIds.includes(user.id));
@@ -48,8 +48,16 @@ export class UserStore {
         return this.users.map(user => user.id);
     }
 
-    @computed get getUsers() {
+    @computed get getAllUsers() {
         return this.users.filter(user => !user.selected) || null;
+    }
+
+    @computed get getUsers() {
+        return this.users.filter(user => !user.selected && user.selected_for_daily) || null;
+    }
+
+    @computed get getSignedInUser() {
+        return this.users[0];
     }
 
 }
@@ -60,6 +68,7 @@ export class User {
     @observable avatar = "";
     @observable selected = false;
     @observable time_spent = 0;
+    @observable selected_for_daily = false;
     @observable yesterday = "";
     @observable today = "";
     @observable blocked = "";
@@ -72,6 +81,10 @@ export class User {
 
     @computed get fullName() {
         return this.name;
+    }
+
+    @action.bound toggleForDaily () {
+        this.selected_for_daily = !this.selected_for_daily;
     }
 
     @action.bound select() {
