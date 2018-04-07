@@ -9,6 +9,7 @@ class BackendStore {
     @observable tasksYesterday = "";
     @observable tasksToday = "";
     @observable tasksProblems = "";
+    @observable data = null;
 
     constructor() {
     }
@@ -23,6 +24,20 @@ class BackendStore {
 
     @action.bound something2() {
 
+    }
+
+    @action loadData() {
+        axios.get('api/v1/projects/1/').then(data => {
+            console.log(data);
+            this.data = data;
+        })
+    }
+
+    getUserTasks = (username) => {
+        const d = this.data && this.data.data.users.find(u => {
+            return u.name === username;
+        });
+        return d && d.issues;
     }
 
 }

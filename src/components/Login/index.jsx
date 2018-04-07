@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react';
-import axios, {setAuthToken} from 'Services/axios';
+import {setAuthToken} from 'Services/axios';
 import { withRouter } from 'react-router-dom';
 import TaskHandler from 'Components/TaskHandler';
 
@@ -28,16 +28,17 @@ class Login extends Component {
 
     login = () => {
         setAuthToken(this.tokenInput.value);
-        this.props.history.push('/dashboard');
+        // this.props.history.push('/dashboard');
+        this.props.backendStore.loadData();
     }
 
     render() {
         return (
             <div className="content-wrapper">
                 <h3>Enter token</h3>
-                <input type="text" ref={(e) => this.tokenInput = e}/><br/>
+                <input type="text" defaultValue="hackday" ref={(e) => this.tokenInput = e}/><br/>
                 <button onClick={this.login}>Login</button>
-                <TaskHandler/>
+                <TaskHandler user="Fiilis-Ville"/>
             </div>
         )
     }

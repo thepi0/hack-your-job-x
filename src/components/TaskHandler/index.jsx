@@ -51,15 +51,28 @@ class TaskHandler extends Component {
     }
 
     render() {
+        const tasks = this.props.backendStore.getUserTasks(this.props.user);
+        let i = 0;
+        console.log(tasks);
         return (
             <div className="TaskHandler">
                 <div className="TaskHandler-task-list">
                     <div className="TaskHandler-task-list-title">Sprint 15</div>
-                    <Task data={this.task}/>
-                    <Task data={this.task}/>
-                    <Task data={this.task}/>
-                    <Task data={this.task}/>
-                    <Task data={this.task}/>
+                    {
+                        tasks && tasks["In Progress"] && tasks["In Progress"].map(t => {
+                            return <Task data={t} key={i++}/>
+                        })
+                    }
+                    {
+                        tasks && tasks["To Do"] && tasks["To Do"].map(t => {
+                            return <Task data={t} key={i++}/>
+                        })
+                    }
+                    {
+                        tasks && tasks["Done"] && tasks["Done"].map(t => {
+                            return <Task data={t} key={i++}/>
+                        })
+                    }
                 </div>
                 <div className="TaskHandler-task-summary">
                     <div className="TaskHandler-task-summary-container">
