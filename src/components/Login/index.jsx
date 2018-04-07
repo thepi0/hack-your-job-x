@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react';
 import axios, {setAuthToken} from 'Services/axios';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import TaskHandler from 'Components/TaskHandler';
 
 import './Login.css';
 
@@ -32,10 +33,11 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="content-wrapper text-center">
+            <div className="content-wrapper">
                 <h3>Enter token</h3>
                 <input type="text" ref={(e) => this.tokenInput = e}/><br/>
                 <button onClick={this.login}>Login</button>
+                <TaskHandler/>
             </div>
         )
     }

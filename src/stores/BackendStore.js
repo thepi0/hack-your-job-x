@@ -6,6 +6,9 @@ import snackbarStore from './SnackbarStore';
 
 class BackendStore {
     @observable people = null;
+    @observable tasksYesterday = "";
+    @observable tasksToday = "";
+    @observable tasksProblems = "";
 
     constructor() {
     }
